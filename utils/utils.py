@@ -191,6 +191,7 @@ def load_data():
            .sort_values(["released_at", "set_name", "collector_number"])
     df["art_crop_uri"] = df["image_uris"].apply(lambda x: x["art_crop"])
     df.drop("image_uris", axis=1, inplace=True)
+    df.reset_index(drop=True, inplace=True)
     return df
 
 
