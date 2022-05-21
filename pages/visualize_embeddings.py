@@ -10,7 +10,7 @@ from utils import (
 def visualize_embeddings(st, **state):    
     basics = load_data()
     idx_cols = ["art_crop_uri", "name", "collector_number", "set_name", "artist", "released_at"]
-    datagen = DataGenerator(basics, batch_size=8)
+    datagen = DataGenerator(basics, batch_size=4)
     feature_extractor = load_model(feature_extractor=True)
 
     try:
